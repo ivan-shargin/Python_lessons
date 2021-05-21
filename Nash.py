@@ -1,7 +1,9 @@
 N = 2 # N strategies for both players
 
 def  index(i, j):
-    """ Returns the index of 1D array that corresponds to element (i, j) of 2D matrix. """
+    """ Returns the index of 1D array 
+        that corresponds to element (i, j) of 2D matrix. 
+    """
     return i * N + j 
 
 def is_nash(i, j):
@@ -14,7 +16,7 @@ def is_nash(i, j):
         if B[index(i,k)] > B[index(i, j)] :
             return False
     return True            
-############################################################################################
+##################################################################
 
 A = [0] * N * N
 B = [0] * N * N
