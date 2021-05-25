@@ -8,20 +8,20 @@ def str_into_floatArr(s, size):
         Returns the array of floats.
     """
     floatArr = [0] * size
-    s = s.split(' ')
+    strArr = s.split(' ')
 
     """ If there were more that one space in a row in data file,
         then after split there will be some empty elements ''
-        in array s.
+        in array strArr.
         For example, the split(' ') for 3 spaces '   ' is ['', '']
         The block below ignores those empty elements ''.
     """
     k = 0
     for i in range(size):
-        while s[k] == '':
+        while strArr[k] == '':
             k += 1
-        else:
-            floatArr[i] = float(s[k])
+        floatArr[i] = float(strArr[k])
+        k += 1
 
     return floatArr
 
