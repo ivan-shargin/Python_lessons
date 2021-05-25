@@ -4,7 +4,7 @@ def str_into_floatArr(s, size):
         The number of floats is limited by the argument 'size'.
         It only ingnores spaces and '\n' at the end of string, so
         if there are another symbols except spaces and decimals,
-        it will end with error and print about it.
+        it will throw exception.
         Returns the array of floats.
     """
 
@@ -14,9 +14,13 @@ def str_into_floatArr(s, size):
         #strips spaces at the begining of s
         #so the begining of float is s[0]
         s = s.lstrip(' ')
-
         end_of_float = min(s.find(' '), s.find('\n'))
-        floatArr[i] = float(s[0:end_of_float])
+
+        try:
+            floatArr[i] = float(s[0:end_of_float])
+        except ValueError:
+            print("The format of value: '" + s[0:end_of_float] + "' is incorrect")
+
         s = s[end_of_float:]
 
     return floatArr
