@@ -11,9 +11,9 @@ def read_matrix_from_file(file):
 
     #The block below gets size of matrix
     size = file.readline()
-    arr_size = size.split('*')
-    size_n = int(arr_size[0])
-    size_m = int(arr_size[1])
+    size = size.split('*')
+    size_n = int(size[0])
+    size_m = int(size[1])
 
     #The block below gets elements of Matrix size_n * size_m
     for i in range(size_n):
