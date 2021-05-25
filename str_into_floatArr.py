@@ -13,7 +13,7 @@ def str_into_floatArr(s, size):
     for i in range(size):
         #strips spaces at the begining of s
         #so the begining of float is s[0]
-        s = s.lstrip()
+        s = s.lstrip(' ')
 
         end_of_float = min(s.find(' '), s.find('\n'))
         floatArr[i] = float(s[0:end_of_float])
