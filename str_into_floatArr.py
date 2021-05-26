@@ -14,7 +14,16 @@ def str_into_floatArr(s, size):
         #strips spaces at the begining of s
         #so the begining of float is s[0]
         s = s.lstrip(' ')
-        end_of_float = min(s.find(' '), s.find('\n'))
+        end_of_float = min(s.find(' '), len(s))
+        # if s.find(' ') != -1 and s.find('\n') != -1:
+        #     end_of_float = min(s.find(' '), s.find('\n'))
+        # elif s.find(' ') == -1 and s.find('\n') != -1:
+        #     end_of_float = s.find('\n')
+        # elif s.find(' ') != -1 and s.find('\n') == -1:
+        #     end_of_float = s.find(' ')
+        # else:
+        #     print("INCORRECT FORMAT!")
+        #     return floatArr
 
         try:
             floatArr[i] = float(s[0:end_of_float])
